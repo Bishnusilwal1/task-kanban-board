@@ -1,37 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kanban Board Application
 
-## Getting Started
+A dynamic and interactive Kanban board built with React, TypeScript, and drag-and-drop functionality. This project allows users to manage tasks across customizable columns, with persistent data storage, search and filtering capabilities, and undo/redo functionality.
 
-First, run the development server:
+## 🚀 Live Demo
 
+You can view the live demo of the Kanban board [here](#) *(https://youtu.be/1X1vP4JNvmI)*.
+
+---
+
+## 📖 Features
+
+### Core Features
+- **Drag-and-Drop Functionality**: Move tasks smoothly between columns using `react-beautiful-dnd`.
+- **Customizable Columns**: Add, edit, and delete columns dynamically.
+- **Task Search and Filtering**: Quickly locate and filter tasks by content or column.
+- **Undo/Redo Functionality**: Revert or redo task-related actions to improve user control.
+- **Local Storage Persistence**: Automatically saves tasks and column configurations to local storage.
+
+### Accessibility Features
+- **Keyboard Accessibility**: Full support for keyboard navigation across the app, ensuring users can perform all actions via keyboard.
+- **ARIA Support**: The app is enhanced with ARIA attributes for screen reader compatibility.
+- **Contrast & Text**: Meets WCAG color contrast guidelines for improved readability.
+
+---
+
+## 🛠️ Technology Stack
+
+### **Frontend**:
+- **React**: A JavaScript library for building user interfaces with components.
+- **TypeScript**: Ensures type safety and enhances code quality.
+- **Tailwind CSS**: A utility-first CSS framework for styling the app quickly and efficiently.
+- **React Beautiful DnD**: A library to handle drag-and-drop interactions with smooth animations.
+
+### **Testing**:
+- **Jest**: Unit testing for ensuring individual functions and components work as expected.
+- **React Testing Library**: Integration tests to simulate user interactions and test component behaviors.
+
+
+ **Future Improvements**: Focus more on UI, backend integration, and testing improvements. Also, ensure smooth and efficient drag-and-drop functionality
+---
+## ⏱️ Time Spent
+
+| Task                         | Time Spent |
+| ---------------------------- | ---------- |
+| Design and Planning           | 1 hours    |
+| UI Development                | 2 hours    |
+| Feature Development           | 5 hours    |
+| Testing                       | 2 hours    |
+| Accessibility Improvements    | 2 hours    |
+
+| **Total**                     | **12 hours** |
+
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# task-kanban-board
+git clone https://github.com/Bishnusilwal1/task-kanban-board.git
+cd task-kanban-board

@@ -4,21 +4,38 @@ import Column from "../../Column";
 
 // Mock the TaskCard component
 jest.mock("../../Card", () => {
-  return jest.fn(({ task }: any) => (
+  return jest.fn(({ task }: { task: { id: string; content: string } }) => (
     <div data-testid="task-card">{task.content}</div>
   ));
 });
 
 // Mock react-beautiful-dnd
 jest.mock("react-beautiful-dnd", () => ({
-  Droppable: ({ children }: any) => {
+  Droppable: ({
+    children,
+  }: {
+    children: (args: {
+      droppableProps: Record<string, unknown>;
+      innerRef: () => void;
+      placeholder: React.ReactNode | null;
+    }) => React.ReactNode;
+  }) => {
     return children({
       droppableProps: {},
       innerRef: jest.fn(),
       placeholder: null,
     });
   },
-  Draggable: ({ children }: any) => {
+  Draggable: ({
+    children,
+  }: {
+    children: (args: {
+      draggableProps: Record<string, unknown>;
+      dragHandleProps: Record<string, unknown>;
+      innerRef: () => void;
+      snapshot: { isDragging: boolean };
+    }) => React.ReactNode;
+  }) => {
     return children({
       draggableProps: {},
       dragHandleProps: {},
@@ -43,7 +60,6 @@ describe("Column Component", () => {
         tasks={mockTasks}
         editTask={jest.fn()}
         deleteTask={jest.fn()}
-        deleteColumn={jest.fn()} // Add this line to pass deleteColumn prop
       />
     );
 

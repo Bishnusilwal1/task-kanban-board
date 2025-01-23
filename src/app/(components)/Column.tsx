@@ -11,7 +11,6 @@ interface ColumnProps {
   tasks: Task[];
   editTask: (columnId: string, taskId: string, newContent: string) => void;
   deleteTask: (columnId: string, taskId: string) => void;
-  deleteColumn?: (columnId: string) => void; // Optional, as it's not being used yet
 }
 
 const Column: React.FC<ColumnProps> = ({
@@ -20,7 +19,7 @@ const Column: React.FC<ColumnProps> = ({
   tasks,
   editTask,
   deleteTask,
-  deleteColumn, // Destructure the deleteColumn prop
+  // Destructure the deleteColumn prop
 }) => {
   return (
     <div className="from-bg-[#384951] bg-gradient-to-r from-[#384951] to-[#1d292d] rounded-lg shadow-md p-4 w-1/4">
@@ -38,7 +37,7 @@ const Column: React.FC<ColumnProps> = ({
                 draggableId={task.id.toString()} // Ensure the task id is a string
                 index={index}
               >
-                {(provided, snapshot) => (
+                {(provided) => (
                   <div
                     ref={provided.innerRef}
                     {...provided.draggableProps}

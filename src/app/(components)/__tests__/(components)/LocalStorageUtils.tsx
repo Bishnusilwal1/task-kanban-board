@@ -1,4 +1,4 @@
-import { render, fireEvent, act } from "@testing-library/react";
+import { render, act } from "@testing-library/react";
 
 import "@testing-library/jest-dom";
 import { useLocalStorage } from "@/app/utils/localStorageUtils";

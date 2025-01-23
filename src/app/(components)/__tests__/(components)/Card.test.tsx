@@ -4,7 +4,16 @@ import TaskCard from "../../Card";
 
 // Mock the Draggable component to ensure snapshot is defined
 jest.mock("react-beautiful-dnd", () => ({
-  Draggable: ({ children }: any) =>
+  Draggable: ({
+    children,
+  }: {
+    children: (args: {
+      draggableProps: Record<string, unknown>;
+      dragHandleProps: Record<string, unknown>;
+      innerRef: () => void;
+      snapshot: { isDragging: boolean };
+    }) => React.ReactNode;
+  }) =>
     children({
       draggableProps: {},
       dragHandleProps: {},

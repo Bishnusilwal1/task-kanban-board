@@ -164,11 +164,6 @@ const Board: React.FC = () => {
     }
   };
 
-  const deleteColumn = (columnId: string) => {
-    const updatedColumns = columns.filter((col) => col.id !== columnId);
-    addState(updatedColumns);
-  };
-
   // Filtering columns based on search query
   const filteredColumns = columns.filter((col) => {
     return col.tasks.some((task) =>
@@ -286,7 +281,6 @@ const Board: React.FC = () => {
               tasks={col.tasks}
               editTask={editTask}
               deleteTask={deleteTask}
-              deleteColumn={deleteColumn}
             />
           ))}
         </div>
